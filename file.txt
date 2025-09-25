@@ -1,0 +1,10 @@
+username: yashsolanki1622_db_user
+password: kOLnfr37Qb8Ulc9y
+connection_string: mongodb+srv://yashsolanki1622_db_user:kOLnfr37Qb8Ulc9y@cluster0.q2qkc3g.mongodb.net/
+
+
+/api/auth/create
+username: emp001
+password: Admin@123
+
+same for all other 5 users starting in line wise in employee table emp001 = Alice, emp002 = Bob ...
