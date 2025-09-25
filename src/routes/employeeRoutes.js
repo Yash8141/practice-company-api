@@ -4,6 +4,7 @@ import {
   getEmployees,
   registerEmployeeWithLogin,
 } from "../controllers/employeeController.js";
+import authenticateJwt from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -35,11 +36,13 @@ router.post("/", createEmployee);
  * /api/employees:
  *   get:
  *     summary: List employees
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: List of employees
  */
-router.get("/", getEmployees);
+router.get("/", authenticateJwt, getEmployees);
 
 /**
  * @openapi
